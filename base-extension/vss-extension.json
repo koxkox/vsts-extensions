@@ -1,0 +1,64 @@
+{
+    "manifestVersion": 1,
+    "id": "extension",
+    "version": "0.1.0",
+    "name": "Extension",
+    "description": "Visual Studio Services extension.",
+    "publisher": "koxkox",
+    "categories": [
+        "Build and release"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "images/icon.png"
+     },
+     "branding": {
+        "color": "rgb(34, 34, 34)",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/koxkox/vsts-extensions"
+    },
+    "contributions": [
+        {
+            "id": "extension",
+            "type": "ms.vss-web.hub",
+            "description": "Adds a 'extension' hub to the Release hub group.",
+            "targets": [
+                "ms.vss-releaseManagement-web.hub-group-rm"
+            ],
+            "properties": {
+                "name": "Extension",
+                "order": 99,
+                "uri": "static/app.html"
+            }
+        }
+    ],
+    "scopes": [
+        "vso.build"
+    ],
+    "files": [
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path": "static",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "static/js/lib"
+        },
+        {
+            "path": "images/icon.png", 
+            "addressable": true
+        }
+    ]
+}

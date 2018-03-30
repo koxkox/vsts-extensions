@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="js/lib/VSS.SDK.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Initialize the VSS sdk
+            VSS.init({
+                usePlatformScripts: true,
+                usePlatformStyles: true
+            });
+            
+            VSS.require(["dist/app"], function (app) { 
+
+            });
+        </script>
+    </body>
+</html>
